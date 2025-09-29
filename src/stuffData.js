@@ -5,7 +5,6 @@ function getStoredStuffData() {
                 return JSON.parse(localStorage.getItem("storedStuffData"))
         }
         return []
-        
 }
 
 export default Array.isArray(getStoredStuffData()) ? [...getStoredStuffData()] : [getStoredStuffData()]

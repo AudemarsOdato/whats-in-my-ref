@@ -21,13 +21,13 @@ export default function AddStuff(props) {
                                 <div className="modal-content">
                                         <form action={getInput}>
                                                 <label htmlFor="stuff-name" className="form-name-label">Stuff name</label>
-                                                <input type="text" name="stuff-name" placeholder="i.e. chuckie" defaultValue="Butter"/>
+                                                <input type="text" name="stuff-name" placeholder="i.e. chuckie" defaultValue="chuckie"/>
 
                                                 <label htmlFor="stuff-category" className="form-category-label">Stuff category</label>
-                                                <input type="text" name="stuff-category" placeholder="i.e. beverages" defaultValue="Butter"/>
+                                                <input type="text" name="stuff-category" placeholder="i.e. beverages" defaultValue="beverages"/>
 
                                                 <label htmlFor="stuff-quantity" className="form-quantity-label">Stuff quantity</label>
-                                                <input type="number" name="stuff-quantity" placeholder="i.e. 10" defaultValue={1}/>
+                                                <input type="number" name="stuff-quantity" placeholder="i.e. 10" defaultValue={10}/>
 
                                                 <input type="submit" value="Add stuff" onClick={props.toggle} />
                                         </form>
