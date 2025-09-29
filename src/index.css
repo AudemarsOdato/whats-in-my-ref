@@ -1,0 +1,195 @@
+:root {
+        --green: #04AA6D;
+        --input-elements-width: 70%;
+}
+
+* {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+        padding: 32px 22px 18px;
+        background-color: var(--green);
+}
+
+header h1 {
+        font-size: 3rem;
+        color: white;
+        max-width: 700px;
+        margin: auto;
+}
+
+.buttons-div {
+        padding: 14px;
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+}
+
+.buttons-div button {
+        width: 100px;
+        height: 36px;
+        border-radius: 4px;
+        border: none;
+        background-color: var(--green);
+        color: white;
+        font-weight: 500;
+}
+
+.buttons-div button:active {
+        box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3), 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+        border: solid 2px black;
+}
+
+.table-div {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+}
+
+table {
+        border-collapse: collapse;
+        width: 85%;
+        max-width: 700px;
+}
+
+th, td {
+        padding: 10px;
+        text-align: left;
+}
+
+tr:nth-child(even) {
+        background-color: #f2f2f2;
+}
+
+th {
+        background-color: var(--green);
+        color: white;
+}
+
+.quantity-table-col {
+        text-align: center;
+}
+
+/*Modal*/
+.modal-container {
+        z-index: 1000;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-body {
+        z-index: 1000000;
+        background-color: white;
+        width: 80%;
+        max-width: 500px;
+        border-radius: 12px;
+}
+
+.modal-header {
+        display: flex;
+        justify-content: space-between;
+        padding: 22px;
+}
+
+.modal-header h1 {
+        font-size: 1.6rem;
+        color: var(--green);
+}
+
+.modal-content {
+        height: 79%;
+        padding: 0 7%;
+        padding-bottom: 34px;
+        margin-top: auto;
+        overflow-y: auto;
+}
+
+.modal-content form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+}
+
+form label {
+        width: 100%;
+        text-align: left;
+        color: rgb(84, 84, 84);
+        font-weight: 400;
+}
+
+form input[type=text],[type=number] {
+        width: 100%;
+        padding: 8px 12px;
+        margin-bottom: 8px;
+        border-radius: 4px;
+        border: solid 1px black;
+}
+
+form input[type=submit] {
+        padding: 8px 24px;
+        margin: 10px 0 0 auto;
+        border: none;
+        background-color: var(--green);
+        color: white;
+        border-radius: 4px;
+}
+
+form input[type=submit]:active {
+        box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3), 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 425px) {
+        .modal-body {
+                width: 90%;
+        }
+
+        .modal-content {
+                padding: 0 5%;
+                padding-bottom: 34px;
+        }
+}
+
+/* Update stuff modal */
+.update-table {
+        width: 100%;
+        min-height: 100%;
+}
+
+.update-table button {
+        border: none;
+        padding: 6px 12px;
+        width: 80px;
+        color: white;
+        border-radius: 4px;
+}
+
+.update-table button:active {
+        box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3), 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+.update-table .put-button {
+        background-color: var(--green);
+}
+
+.update-table .took-button {
+        background-color: #c40404;
+}
+
+.table-buttons {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        gap: 6px;
+}
