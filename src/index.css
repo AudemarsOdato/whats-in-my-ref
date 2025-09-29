@@ -30,8 +30,8 @@ header h1 {
 }
 
 .buttons-div button {
-        width: 100px;
-        height: 36px;
+        width: 120px;
+        height: 40px;
         border-radius: 4px;
         border: none;
         background-color: var(--green);
@@ -127,6 +127,7 @@ form label {
         text-align: left;
         color: rgb(84, 84, 84);
         font-weight: 400;
+        font-size: 14px;
 }
 
 form input[type=text],[type=number] {
@@ -135,10 +136,11 @@ form input[type=text],[type=number] {
         margin-bottom: 8px;
         border-radius: 4px;
         border: solid 1px black;
+        font-size: 16px;
 }
 
 form input[type=submit] {
-        padding: 8px 24px;
+        padding: 10px 26px;
         margin: 10px 0 0 auto;
         border: none;
         background-color: var(--green);
@@ -169,7 +171,7 @@ form input[type=submit]:active {
 
 .update-table button {
         border: none;
-        padding: 6px 12px;
+        padding: 8px 14px;
         width: 80px;
         color: white;
         border-radius: 4px;
