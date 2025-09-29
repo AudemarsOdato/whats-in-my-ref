@@ -10,18 +10,15 @@ export default function UpdateStuff(props) {
 
         function putOneHandler(stuff) {
                 stuff.quantity += 1
-                console.log(stuff.quantity)
                 props.checkEmptyStuffs()
                 props.updateLocalStorage()
         }
 
         function tookOneHandler(stuff) {
                 stuff.quantity -= 1
-                console.log(stuff.quantity)
                 props.checkEmptyStuffs()
                 props.updateLocalStorage()
         }
-
 
         return (
                 <section onClick={props.toggle} style={props.styles} className="modal-container">
