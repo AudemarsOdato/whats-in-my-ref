@@ -24,7 +24,14 @@ export default function AddStuff(props) {
                                                 <input type="text" name="stuff-name" placeholder="i.e. chuckie"/>
 
                                                 <label htmlFor="stuff-category" className="form-category-label">Stuff category</label>
-                                                <input type="text" name="stuff-category" placeholder="i.e. beverages"/>
+                                                <input  list="categories" type="text" name="stuff-category" placeholder="i.e. beverages"/>
+                                                <datalist id="categories">
+                                                        <option value="beverages"></option>
+                                                        <option value="meat"></option>
+                                                        <option value="ingredients"></option>
+                                                        <option value="vegies"></option>
+                                                        <option value="fruits"></option>
+                                                </datalist>
 
                                                 <label htmlFor="stuff-quantity" className="form-quantity-label">Stuff quantity</label>
                                                 <input type="number" name="stuff-quantity" placeholder="i.e. 10"/>
