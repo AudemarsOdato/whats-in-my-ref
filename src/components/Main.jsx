@@ -52,7 +52,7 @@ export default function Main() {
         
         const [isUpdateModalVisible, setIsUpdateModalVisible] = useState(false)
         function toggleUpdateModal() {
-                if (stuffs.length === 0) {
+                if (!isUpdateModalVisible && stuffs.length === 0) {
                         alert("No stuff available!")
                         return;
                 }
