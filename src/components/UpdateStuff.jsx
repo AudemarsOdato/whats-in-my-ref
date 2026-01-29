@@ -28,18 +28,20 @@ export default function UpdateStuff(props) {
                                 </div>
 
                                 <div className="modal-content">
-                                        <table className="update-table">
-                                                <thead>
-                                                        <tr>
-                                                                <th>Stuffs</th>
-                                                                <th></th>
-                                                        </tr>
-                                                </thead>
-                                                <tbody>
-                                                        {/* Data goes here: */}
-                                                        {displayStuffs}
-                                                </tbody>
-                                        </table>
+                                        {props.stuffData.length > 0 &&
+                                                <table className="update-table">
+                                                        <thead>
+                                                                <tr>
+                                                                        <th>Stuffs</th>
+                                                                        <th></th>
+                                                                </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                                {/* Data goes here: */}
+                                                                {displayStuffs}
+                                                        </tbody>
+                                                </table>
+                                        }
                                 </div>
                         </div>
                 </section>

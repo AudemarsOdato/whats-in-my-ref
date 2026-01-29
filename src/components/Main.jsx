@@ -46,13 +46,16 @@ export default function Main() {
         }
 
         const [isAddModalVisible, setIsAddModalVisible] = useState(false)
-        const [isUpdateModalVisible, setIsUpdateModalVisible] = useState(false)
-
         function toggleAddModal() {
                 setIsAddModalVisible(prev => !prev)
         }
-
+        
+        const [isUpdateModalVisible, setIsUpdateModalVisible] = useState(false)
         function toggleUpdateModal() {
+                if (stuffs.length === 0) {
+                        alert("No stuff available!")
+                        return;
+                }
                 setIsUpdateModalVisible(prev => !prev)
         }
 
@@ -64,21 +67,22 @@ export default function Main() {
                                 <button className="add-stuff-button" onClick={toggleAddModal}>Add stuff</button>
                                 <button className="update-stuff button" onClick={toggleUpdateModal}>Update stuff</button>
                         </div>
-                        <div className="table-div">                                
-                                <table>
-                                        <thead>
-                                                <tr>
-                                                        <th>Stuffs</th>
-                                                        <th>Category</th>
-                                                        <th className='quantity-table-col'>Quantity</th>
-                                                </tr>
-                                        </thead>
-                                        <tbody>
-                                                {/* Display stuffs here */}
-                                                {displayStuffs}
-                                        </tbody>
-                                </table>
-                        </div>
+                        {stuffs.length > 0 && 
+                                <div className="table-div">                                
+                                        <table>
+                                                <thead>
+                                                        <tr>
+                                                                <th>Stuffs</th>
+                                                                <th>Category</th>
+                                                                <th className='quantity-table-col'>Quantity</th>
+                                                        </tr>
+                                                </thead>
+                                                <tbody>
+                                                        {displayStuffs}
+                                                </tbody>
+                                        </table>
+                                </div>
+                        }
                 </main>
         )
 }

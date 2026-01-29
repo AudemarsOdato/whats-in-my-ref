@@ -19,7 +19,7 @@ export default function AddStuff(props) {
                                 </div>
 
                                 <div className="modal-content">
-                                        <form action={getInput}>
+                                        <form action={getInput}>                                        
                                                 <label htmlFor="stuff-name" className="form-name-label">Stuff name</label>
                                                 <input type="text" name="stuff-name" placeholder="i.e. chuckie"/>
 
